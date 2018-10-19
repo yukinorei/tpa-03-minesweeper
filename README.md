@@ -31,9 +31,10 @@
   * 横19タイル、縦10タイルのボードサイズにしましょう。
 * startGameメソッドを追加して、start ボタンのclickイベントに紐付けよう。
 * startGameの実装：データ型をリセットしましょう。
-* <tr><td>タグを使用して19x10のボードを表示しよう。[ヒント] 描画のコードはデータ設計にもよりますが、タイルが二次元配列の場合、double v-for文で`<Tile>`を回す感じになります。
-  * _ヒント:_ v-for文で、要素だけではなく、indexも取得したかったらこういうシンタックスです `v-for="(row, rowIndex) in tiles"` ((v-for)[https://vuejs.org/v2/guide/list.html])
-* 一つの`<td>をTileとしてコンポーネント化しよう。
+* `<tr><td></td></tr>`タグを使用して19x10のボードを表示しよう。
+  * _ヒント_ 描画のコードはデータ設計にもよりますが、タイルが二次元配列の場合、double v-for文で`<Tile>`を回す感じになります。
+  * _ヒント:_ v-for文で、要素だけではなく、indexも取得したかったらこういうシンタックスです `v-for="(row, rowIndex) in tiles"`
+* 一つの`<td>`をTileとしてコンポーネント化しよう。
 
 [Checkpoint1完成画面（スタートボタンを押した後）](https://i.imgur.com/dZhUUoV.png)
 
