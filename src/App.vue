@@ -10,6 +10,8 @@
           v-for="(tile, columnIndex) in row"
           v-bind:key="columnIndex"
           v-bind:data="tile"
+          v-on:leftClick="openTile"
+          v-on:rightClick="flagTile"
         >
         </Tile>
       </tr>
@@ -33,6 +35,11 @@ export default {
     };
   },
   methods: {
+    /**
+     * resets the tile data
+     * @function
+     * @return {undefined}
+     */
     startGame: function() {
       this.tiles = [];
       for (let rowIndex = 0; rowIndex < this.rows; rowIndex++) {
@@ -48,6 +55,75 @@ export default {
         }
         this.tiles.push(row);
       }
+    },
+
+    /**
+     * opens a tile
+     * @function
+     * @param {Object} tile
+     * @return {undefined}
+     */
+    openTile: function() {
+
+    },
+
+    /**
+     * flags a tile
+     * @function
+     * @param {Object} tile
+     * @return {undefined}
+     */
+    flagTile: function(tile) {
+      tile.class = 'flagged';
+    },
+
+    /**
+     * opens all tiles
+     * @function
+     * @return {undefined}
+     */
+    showAllTiles: function() {
+
+    },
+
+    /**
+     * returns an array of neighbors surrounding input tile
+     * @function
+     * @param {Object} tile
+     * @return {Array.<Object>} - an array of tile objects
+     */
+    getNeighbors: function() {
+
+    },
+    /**
+     * returns the number of mines within an array of tiles
+     * @function
+     * @param {Array.<Object>} neighbors - an array of tile objects
+     * @return {number} - number of mines in neighbors array
+     */
+    countNeighboringMines: function() {
+
+    },
+
+    /**
+     * checks if tile is not open
+     * @function
+     * @param {Object} tile
+     * @return {boolean}
+     */
+    isUnopened: function() {
+
+    },
+
+    /**
+     * checks to see if row and col are valid indices within the game board
+     * @function
+     * @param {number} rowIndex
+     * @param {number} columnIndex
+     * @return {boolean}
+     */
+    isValid: function() {
+
     },
   },
 };
