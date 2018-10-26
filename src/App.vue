@@ -1,33 +1,40 @@
 <template>
   <div id="app">
-    <button>Start Game</button>
+    <button v-on:click="startGame">Start Game</button>
     <table class="minesweeper">
-      <tr>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
-      </tr>
-      <tr>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
-        <td class="unopened"></td>
+      <tr
+      v-for="(row, rowIndex) in tiles"
+      v-bind:key="rowIndex"
+      >
+        <Tile
+          v-for="(tile, columnIndex) in row"
+          v-bind:key="columnIndex"
+          v-bind:data="tile"
+        >
+        </Tile>
       </tr>
     </table>
   </div>
 </template>
 
 <script>
+import Tile from './components/Tile';
 export default {
   name: 'App',
+  components: {
+    Tile,
+  },
   data: () => {
-    return {};
+    return {
+      rows: 10,
+      columns: 19,
+      tiles: [],
+    };
   },
   methods: {
+    startGame: function() {
 
+    };
   }
 };
 </script>
@@ -57,53 +64,4 @@ table.minesweeper td {
   background-size: cover;
 }
 
-td.unopened {
-  background: url('./assets/unopened.svg');
-  cursor: pointer;
-}
-
-td.opened {
-  background: url('./assets/opened.svg');
-}
-
-td.flagged {
-  background: url('./assets/flag.svg');
-  cursor: pointer;
-}
-
-td.mine {
-  background: url('./assets/mine.png');
-}
-
-td.mine-neighbor-1 {
-  background: url('./assets/1.svg');
-}
-
-td.mine-neighbor-2 {
-  background: url('./assets/2.svg');
-}
-
-td.mine-neighbor-3 {
-  background: url('./assets/3.svg');
-}
-
-td.mine-neighbor-4 {
-  background: url('./assets/4.svg');
-}
-
-td.mine-neighbor-5 {
-  background: url('./assets/5.svg');
-}
-
-td.mine-neighbor-6 {
-  background: url('./assets/6.svg');
-}
-
-td.mine-neighbor-7 {
-  background: url('./assets/7.svg');
-}
-
-td.mine-neighbor-8 {
-  background: url('./assets/8.svg');
-}
 </style>
