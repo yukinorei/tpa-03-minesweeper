@@ -1,9 +1,5 @@
 <template>
-  <td
-    v-bind:class="data.class"
-    v-on:click="$emit('leftClick', data)"
-    v-on:contextmenu.prevent="$emit('rightClick', data)"
-  >
+  <td v-bind:class="data.class">
   </td>
 </template>
 

@@ -19,6 +19,7 @@
 
 <script>
 import Tile from './components/Tile';
+
 export default {
   name: 'App',
   components: {
@@ -33,8 +34,20 @@ export default {
   },
   methods: {
     startGame: function() {
-
-    };
+      for (let rowIndex = 0; rowIndex < this.rows; rowIndex++) {
+        let row = [];
+        for (let columnIndex = 0; columnIndex < this.columns; columnIndex++) {
+          let tile = {
+            row: rowIndex,
+            column: columnIndex,
+            mined: Math.random() * 6 > 5,
+            class: 'unopened',
+          };
+          row.push(tile);
+        }
+        this.tiles.push(row);
+      }
+    },
   }
 };
 </script>
