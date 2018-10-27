@@ -12,6 +12,7 @@
           :data="tile"
         >
         </TheTile>
+
       </tr>
     </table>
   </div>
@@ -34,7 +35,7 @@ export default {
   },
   methods: {
     startGame: function() {
-      this.titles = [];
+      this.tiles = [];
       for (let rowIndex = 0; rowIndex < this.rows; rowIndex++) {
         let row = [];
         for (let columnIndex = 0; columnIndex < this.columns; columnIndex++) {
@@ -49,7 +50,7 @@ export default {
         this.tiles.push(row);
       }
     },
-  }
+  },
 };
 </script>
 
@@ -77,5 +78,4 @@ table.minesweeper td {
   height: 24px;
   background-size: cover;
 }
-
 </style>

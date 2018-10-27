@@ -36,7 +36,6 @@
   * _ヒント:_ v-for文で、要素だけではなく、indexも取得したかったらこういうシンタックスです `v-for="(row, rowIndex) in tiles"`
 * 一つの`<td>`をTileとしてコンポーネント化しよう。
 
-
 [Checkpoint1完成画面（スタートボタンを押した後）](https://i.imgur.com/dZhUUoV.png)
 
 # Checkpoint-2

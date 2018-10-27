@@ -1,6 +1,5 @@
 <template>
   <td v-bind:class="data.class">
-  </td>
 </template>
 
 <script>
