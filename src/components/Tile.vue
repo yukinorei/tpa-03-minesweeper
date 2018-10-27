@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'Tile',
+  name: 'TheTile',
   props: ['data'],
 };
 </script>
