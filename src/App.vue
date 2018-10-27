@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     startGame: function() {
+      this.titles = [];
       for (let rowIndex = 0; rowIndex < this.rows; rowIndex++) {
         let row = [];
         for (let columnIndex = 0; columnIndex < this.columns; columnIndex++) {
