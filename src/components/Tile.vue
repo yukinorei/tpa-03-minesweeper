@@ -1,15 +1,10 @@
 <template>
-  <td
-    v-bind:class="data.class"
-    v-on:click="$emit('leftClick', data)"
-    v-on:contextmenu.prevent="$emit('rightClick', data)"
-  >
-  </td>
+  <td v-bind:class="data.class">
 </template>
 
 <script>
 export default {
-  name: 'Tile',
+  name: 'TheTile',
   props: ['data'],
 };
 </script>
