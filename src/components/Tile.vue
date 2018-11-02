@@ -1,5 +1,10 @@
 <template>
-  <td v-bind:class="data.class">
+  <td
+    :class="data.class"
+    @click="$emit('leftClick', data)"
+    @contextmenu.prevent="$emit('rightClick', data)"
+  >
+  </td>
 </template>
 
 <script>
